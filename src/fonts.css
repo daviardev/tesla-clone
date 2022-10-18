@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'GothamSSm-Light_Web';
+    src: url('../public/fonts/GothamSSm-Light_Web.woff2') format('woff2');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'GothamSSm-Medium_Web';
+    src: url('../public/fonts/GothamSSm-Medium_Web.woff2') format('woff2');
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: 'GothamSSm-Bold_Web';
+    src: url('../public/fonts/GothamSSm-Bold_Web.woff2') format('woff2');
+    font-weight: bold;
+}
