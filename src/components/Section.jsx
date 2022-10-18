@@ -1,16 +1,16 @@
 import styled from 'styled-components'
 
-const Section = ({ title, backgroundImg }) => {
+const Section = ({ title, description, backgroundImg, leftButton, rightButton }) => {
   return (
     <Wrap bgImage={ backgroundImg }>
       <ItemText>
         <h1>{ title }</h1>
-        <p>Pedír online la entrega sin contacto</p>
+        <Paragraph>{ description }</Paragraph>
       </ItemText>
       <Buttons>
         <ButtonGroup>
-          <LeftButton>Pedido personalizado</LeftButton>
-          <RightButton>Inventario existente</RightButton>
+          <LeftButton>{ leftButton }</LeftButton>
+          { rightButton && <RightButton>{ rightButton }</RightButton> }
         </ButtonGroup>
         <DownArrow src="../../public/down-arrow.svg" />
       </Buttons>
@@ -55,7 +55,7 @@ const LeftButton = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 100px;
+  border-radius: 5px;
   opacity: 0.85;
   text-transform: uppercase;
   font-size: 12px;
@@ -78,4 +78,8 @@ const DownArrow = styled.img`
 
 const Buttons = styled.div `
 
+`
+
+const Paragraph = styled.p `
+  font-family: 'GothamSSm-Light_Web';
 `
