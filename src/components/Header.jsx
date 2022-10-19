@@ -2,9 +2,12 @@ import styled from "styled-components"
 
 import { GrClose } from "react-icons/gr";
 import React, { useState } from 'react'
+import { selectCars } from '../features/carSlice'
+import { useSelector } from 'react-redux'
 // 1:37:03
 const Header = () => {
   const [burgerStatus, setBurgerStatus] = useState(false)
+  const cars = useSelector(selectCars)
 
   return (
     <Content>
@@ -12,12 +15,10 @@ const Header = () => {
         <img src="../../public/logo.svg" />
       </a>
       <Menu>
-        <p><a href="#">Modelo S</a></p>
-        <p><a href="#">Modelo 3</a></p>
-        <p><a href="#">Modelo X</a></p>
-        <p><a href="#">Modelo Y</a></p>
-        <p><a href="#">Paneles Solares</a></p>
-        <p><a href="#">Techo Solar</a></p>
+        { cars && cars.map((car, _) => (
+          <a key={_} href="#">{ car }</a>
+
+        )) }
       </Menu>
       <RightMenu>
         <a href="#">Tienda</a>
@@ -28,16 +29,15 @@ const Header = () => {
         <CloseWrapper>
           <CloseBtn onClick={() => setBurgerStatus(false)} />
         </CloseWrapper>
+        { cars && cars.map((car, _) => (
+          <li key={_}><a href="#">{ car }</a></li>
+        )) }
         <li>Inventario Existente</li>
         <li>Inventario Usado</li>
         <li>Intercambio</li>
         <li>Prueba De Manejo</li>
-        <li>Seguros</li>
         <li>Cybertruck</li>
         <li>Roadster</li>
-        <li>Semi</li>
-        <li>Carga</li>
-        <li>Powerwall</li>
       </BtnMenu>
     </Content>
   )
@@ -70,13 +70,6 @@ const Menu = styled.div `
     font-size: 13px;
     margin: 0 8px;
     transition: color .33s ease;
-    backdrop-filter: blur(13px);
-
-    &:hover {
-      background: #fff;
-      opacity: 40%;
-      height: 25px;
-    }
   }
 
   @media (max-width: 1195px) {
@@ -116,6 +109,10 @@ const BtnMenu = styled.div `
 
   a {
     font-weight: 600;
+
+    &:hover {
+      background: #fff;
+    }
   }
 `
 
