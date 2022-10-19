@@ -1,17 +1,22 @@
 import styled from 'styled-components'
+import Fade from 'react-reveal/Fade'
 
 const Section = ({ title, description, backgroundImg, leftButton, rightButton }) => {
   return (
-    <Wrap bgImage={ backgroundImg }>
-      <ItemText>
-        <h1>{ title }</h1>
-        <Paragraph>{ description }</Paragraph>
-      </ItemText>
+    <Wrap bgImage={backgroundImg}>
+      <Fade bottom>
+        <ItemText>
+          <h1>{title}</h1>
+          <Paragraph>{description}</Paragraph>
+        </ItemText>
+      </Fade>
       <Buttons>
-        <ButtonGroup>
-          <LeftButton>{ leftButton }</LeftButton>
-          { rightButton && <RightButton>{ rightButton }</RightButton> }
-        </ButtonGroup>
+        <Fade bottom>
+          <ButtonGroup>
+            <LeftButton>{leftButton}</LeftButton>
+            {rightButton && <RightButton>{rightButton}</RightButton>}
+          </ButtonGroup>
+        </Fade>
         <DownArrow src="../../public/down-arrow.svg" />
       </Buttons>
     </Wrap>
@@ -57,7 +62,6 @@ const LeftButton = styled.div`
   align-items: center;
   border-radius: 5px;
   opacity: 0.85;
-  text-transform: uppercase;
   font-size: 12px;
   cursor: pointer;
   margin: 8px;
@@ -76,10 +80,10 @@ const DownArrow = styled.img`
   animation: downAnim infinite 1.5s;
 `
 
-const Buttons = styled.div `
+const Buttons = styled.div`
 
 `
 
-const Paragraph = styled.p `
+const Paragraph = styled.p`
   font-family: 'GothamSSm-Light_Web';
 `
