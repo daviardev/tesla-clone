@@ -5,6 +5,7 @@ const Section = ({ title, description, backgroundImg, leftButton, rightButton })
   return (
     <Wrap bgImage={backgroundImg}>
       <Fade bottom>
+
         <ItemText>
           <h1>{title}</h1>
           <Paragraph>{description}</Paragraph>
@@ -26,6 +27,7 @@ const Section = ({ title, description, backgroundImg, leftButton, rightButton })
 export default Section
 
 const Wrap = styled.div`
+  z-index: 1;
   width: 100vw;
   height: 100vh;
   background-size: cover;
@@ -39,7 +41,7 @@ const Wrap = styled.div`
 `
 
 const ItemText = styled.div`
-  padding-top: 15vh;
+  padding: 15vh;
   text-align: center;
 `
 
