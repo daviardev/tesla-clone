@@ -10,45 +10,45 @@ const Home = () => {
       <Suspense>
       <Section
           title='Modelo 3'
-          description='Pedír online la entrega sin contacto'
+          description='Pedír Online la entrega Sin Contacto'
           backgroundImg='../../public/images/model-3.jpg'
-          leftButton='Pedido personalizado'
-          rightButton='Inventario existente'
+          leftButton='Pedido Personalizado'
+          rightButton='Inventario Existente'
         />
         <Section
           title='Modelo Y'
-          description='Pedír online la entrega sin contacto'
+          description='Pedír Online la entrega Sin Contacto'
           backgroundImg='../../public/images/model-y.jpg'
-          leftButton='Pedido personalizado'
-          rightButton='Inventario existente'
+          leftButton='Pedido Personalizado'
+          rightButton='Inventario Existente'
         />
         <Section
           title='Modelo S'
-          description='Pedír online la entrega sin contacto'
+          description='Pedír Online la entrega Sin Contacto'
           backgroundImg='../../public/images/model-s.jpg'
-          leftButton='Pedido personalizado'
-          rightButton='Inventario existente'
+          leftButton='Pedido Personalizado'
+          rightButton='Inventario Existente'
         />
         <Section
           title='Modelo X'
-          description='Pedír online la entrega sin contacto'
+          description='Pedír Online la entrega Sin Contacto'
           backgroundImg='../../public/images/model-x.jpg'
-          leftButton='Pedido personalizado'
-          rightButton='Inventario existente'
+          leftButton='Pedido Personalizado'
+          rightButton='Inventario Existente'
         />
         <Section 
-          title='Paneles solares'
-          description='Los paneles solares más económicos de América'
+          title='Paneles Solares'
+          description='Los Paneles Solares Más Económicos De América'
           backgroundImg='../../public/images/solar-panel.jpg'
-          leftButton='Ordenar ahora'
-          rightButton='Más información'
+          leftButton='Ordenar Ahora'
+          rightButton='Más Información'
         />
         <Section 
-          title='Techo solar'
-          description='Produzca energía limpia desde su techo'
+          title='Techo Solar'
+          description='Produzca Energía Limpia Desde Su Techo'
           backgroundImg='../../public/images/solar-roof.jpg'
-          leftButton='Ordenar ahora'
-          rightButton='Más información'
+          leftButton='Ordenar Ahora'
+          rightButton='Más Información'
         />
         <Section 
           title='Accesorios'
